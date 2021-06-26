@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import  Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
-        <h1 >Hola mundo</h1>
-    </div>
+    <Fragment>
+      <div className="App">
+          <Header 
+          titulo= "Cotizador de prestamos"
+          />
+      </div>
+    </Fragment>
+      
   );
 }
 
