@@ -16,7 +16,30 @@ export function calcularTotal(cantidad, plazo) {
     } else {
         totalCantidad = cantidad * 0.10;
     }
+// Calcular el plazo
+// 3 = 5%
+// 6 = 10%
+// 12 = 15%
+// 24 = 20%
 
-    console.log(totalCantidad);
+    let totalPlazo = 0;
 
+    switch(plazo) {
+        case 3:
+            totalPlazo = cantidad * 0.05;
+            break;
+        case 6:
+            totalPlazo = cantidad * 0.10;
+            break;
+        case 12:
+            totalPlazo = cantidad * 0.15;
+            break;
+        case 24:
+            totalPlazo = cantidad * 0.20;
+            break;
+        default:
+            break;
+    }
+
+    return totalPlazo + totalCantidad + cantidad;
 }
